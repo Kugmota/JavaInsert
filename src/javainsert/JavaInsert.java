@@ -23,7 +23,7 @@ public class JavaInsert {
         try {
             // create a mysql database connection
             String myDriver = "com.mysql.jdbc.Driver";
-            String myUrl = "jdbc:mysql://localhost/insertlastinjava";
+            String myUrl = "jdbc:mysql://localhost/compare";
             Class.forName(myDriver);
             Connection conn = DriverManager.getConnection(myUrl, "root", "");
 
@@ -32,11 +32,11 @@ public class JavaInsert {
             System.out.println("Time Start: " + java.time.LocalTime.now());
             while (count != 1000) {
                 int one = 1, two = 2, three = 3, four = 4, five = 5;
-                String sqlString = "insert into tblinserted (first, second, third, forth, fifth, time)"
+                String sqlString = "insert into tblcompare (one, two, three, four, five, time)"
                         + " values " + "(" + one + "," + two + "," + three + "," + four + "," + five + ",'" + java.time.LocalTime.now() + "')";
                 // note that i'm leaving "date_created" out of this insert statement
                 st.executeUpdate(sqlString);
-                count ++;
+                count++;
             }
             System.out.println("Time Ends: " + java.time.LocalTime.now());
             conn.close();
