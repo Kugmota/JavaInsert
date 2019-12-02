@@ -14,7 +14,7 @@ import java.sql.Statement;
  *
  * @author yorongra_sd2081
  */
-public class JavaInsert {
+public class sqlnosqlmongo {
 
     /**
      * @param args the command line arguments
